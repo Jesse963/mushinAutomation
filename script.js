@@ -30,7 +30,11 @@ document.querySelectorAll(".navLink").forEach((link) => {
   console.log(link.textContent);
   link.addEventListener("click", (e) => {
     const targetPage = link.textContent.replace(" ", "_").toLowerCase();
-    window.location.href = "/" + targetPage;
+    if (onLocalMachine) {
+      window.location.href = "/" + targetPage + ".html";
+    } else {
+      window.location.href = "/" + targetPage;
+    }
   });
 });
 
