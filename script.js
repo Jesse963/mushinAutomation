@@ -1,13 +1,21 @@
+var onLocalMachine = false;
 window.onload = function () {
+  //Extend small logo decoration
   const navbarLogo = document.querySelector("navbar>logo");
   const extendedDecoration = document.querySelector(
     "navbar>.decoration.right.extended"
   );
   const bodyWidth = document.querySelector(":root").clientWidth;
   const adjustmentPercentage = (100 * navbarLogo.clientWidth) / bodyWidth;
-  console.log(adjustmentPercentage + " %");
   extendedDecoration.style.width = `calc(100% - ${adjustmentPercentage}% - 0.2em)`;
-  console.log(extendedDecoration);
+
+  //Set onLocalMachine to true if required
+  onLocalMachine =
+    window.location.href.includes("127.0.0.1") ||
+    window.location.href.includes("local")
+      ? true
+      : false;
+  console.log(onLocalMachine);
 };
 
 //ADD HOME NAV TO ALL LOGOS
@@ -20,8 +28,8 @@ document.querySelectorAll("logo").forEach((logo) => {
 //ADD NAV TO ALL NAVLINKS
 document.querySelectorAll(".navLink").forEach((link) => {
   console.log(link.textContent);
-  const targetPage = link.textContent.replace(" ", "_").toLowerCase();
   link.addEventListener("click", (e) => {
+    const targetPage = link.textContent.replace(" ", "_").toLowerCase();
     window.location.href = "/" + targetPage;
   });
 });
