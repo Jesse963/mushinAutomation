@@ -89,6 +89,7 @@ navbar {
 }
 
 logo {
+  cursor: pointer;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -151,6 +152,7 @@ logo {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   > .links {
     position: relative;
     padding: 0px;
