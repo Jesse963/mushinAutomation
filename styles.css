@@ -24,9 +24,10 @@ body {
 h3 {
   width: 100%;
   text-align: center;
-  font-family: var(--subheadingFont);
+  font-family: var(--textFont);
+  font-weight: 800;
   /* font-weight: 400; */
-  font-size: 32px;
+  font-size: 34px;
   color: var(--highlight);
 }
 
@@ -64,6 +65,7 @@ navbar {
   gap: 1vw;
   align-items: center;
   > .navLink {
+    transition: opacity 0.2s ease-in-out;
     /* margin-right: 1vw; */
     margin-bottom: 0.5vw;
     list-style: none;
@@ -305,6 +307,7 @@ a.button {
 
 footer {
   width: 100%;
+  padding: 1.5em 0;
   /* height: max-content; */
   background-color: var(--text);
   position: relative;
@@ -327,7 +330,7 @@ footer {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 5em;
+    /* margin-top: 5em; */
     /* margin: 0.5em 0; */
     display: flex;
     width: 80%;
