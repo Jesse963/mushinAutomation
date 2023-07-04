@@ -202,7 +202,7 @@ logo {
 
 /* MAIN PAGE BANNER */
 banner {
-  background-image: url("istockphoto-1397746896-2048x2048.jpg");
+  background-image: url("assets/images/istockphoto-1397746896-2048x2048.jpg");
   background-color: black;
   background-size: contain;
   background-repeat: no-repeat;
@@ -274,7 +274,7 @@ a.button {
       width: calc(98.5% - 2em);
     }
   }
-  .darkbg {
+  &.darkbg {
     color: var(--background);
   }
 }
@@ -309,6 +309,7 @@ a.button {
 
 footer {
   width: 100%;
+  margin-top: 8em;
   padding: 1.5em 0;
   /* height: max-content; */
   background-color: var(--text);
@@ -343,6 +344,10 @@ footer {
       /* border: 1px dotted white; */
       height: max-content;
       width: 100%;
+    }
+    > .contact.container > .socials {
+      gap: 0.5em;
+      justify-content: end;
     }
   }
   .links {
@@ -381,6 +386,23 @@ footer {
     > a.button {
       color: var(--background);
       padding-left: 0;
+    }
+  }
+}
+
+.socials {
+  position: relative;
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  justify-content: center;
+  > img {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1vw);
+    opacity: 0.8;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
     }
   }
 }

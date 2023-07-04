@@ -1,0 +1,97 @@
+section {
+  width: 100vw;
+  height: fit-content;
+  margin: 2vw 0 3vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > .main.content {
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+    transform: translate(0%);
+    width: 50%;
+    height: 55vh;
+    background-color: var(--highlight);
+    /* overflow-y: scroll;
+    overflow-x: auto; */
+    > .contact.information {
+      box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -5%;
+      background-color: var(--text);
+      width: 40%;
+      height: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 2em;
+      > h3 {
+        font-weight: 100;
+        color: var(--background);
+        margin-bottom: 0px;
+      }
+      > .details {
+        font-size: 1.4em;
+        text-align: center;
+        color: var(--background);
+        opacity: 0.8;
+      }
+    }
+    > .contact.form {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      width: 50%;
+      height: 90%;
+      overflow-y: scroll;
+      /* Hide Scrollbars */
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      > h3 {
+        font-weight: 600;
+        color: var(--text);
+        opacity: 1;
+      }
+      > .main.fields {
+        margin-bottom: 1em;
+        > input {
+          position: relative;
+          background: none;
+          width: 42%;
+          margin: 0.5em;
+          padding: 0.5em;
+          border: none;
+          font-family: var(--text-font);
+          opacity: 1;
+          font-size: 1.3em;
+          border-bottom: 1px solid var(--background);
+          &::placeholder {
+            color: var(--text);
+            opacity: 0.8;
+          }
+          &:focus {
+            border: 2px solid var(--text);
+            outline: none;
+          }
+        }
+      }
+      > textarea {
+        position: relative;
+        background: none;
+        width: 42%;
+        margin: 0.5em;
+        padding: 0.5em;
+        border: none;
+        font-family: var(--text-font);
+        opacity: 1;
+        font-size: 1.3em;
+        border: 1px solid white;
+        width: calc(100% - 2em);
+      }
+    }
+  }
+}

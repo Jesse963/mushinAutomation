@@ -15,7 +15,6 @@ window.onload = function () {
     window.location.href.includes("local")
       ? true
       : false;
-  console.log(onLocalMachine);
 };
 
 //ADD HOME NAV TO ALL LOGOS
@@ -25,11 +24,15 @@ document.querySelectorAll("logo").forEach((logo) => {
   });
 });
 
-//ADD NAV TO ALL NAVLINKS
+//ADD NAV TO ALL NAVLINKS AND HIGHLIGHT CURRENT LINK
 document.querySelectorAll(".navLink").forEach((link) => {
-  console.log(link.textContent);
+  const targetPage = link.textContent.replace(" ", "_").toLowerCase();
+  if (window.location.pathname.includes(targetPage)) {
+    link.style.opacity = "1";
+    link.style.color = "var(--highlight)";
+  }
+
   link.addEventListener("click", (e) => {
-    const targetPage = link.textContent.replace(" ", "_").toLowerCase();
     if (onLocalMachine) {
       window.location.href = "/" + targetPage + ".html";
     } else {

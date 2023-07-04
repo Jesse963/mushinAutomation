@@ -10,8 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat&family=Oxanium&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="icon.svg" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="icon" href="assets/icons/icon.svg" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -39,143 +40,65 @@
       </ul>
     </div>
     <!-- CONTENT -->
-    <!-- BANNER -->
-    <banner class="banner container">
-      <div class="banner content">
-        <h2 class="heading">Reclaim Time Lost to Tedium</h2>
-        <p class="subheading">
-          We deliver seamless transformation with <em>cutting-edge</em> Robotic
-          Process Automation and <em>Data-Driven solutions</em>.
-        </p>
-        <a class="button default"
-          >Book your Free Consultation<span class="material-symbols-outlined">
-            chevron_right
-          </span></a
-        >
-      </div>
-    </banner>
-    <!-- MAIN CONTENT 1 -->
-    <section class="main page content">
-      <div class="left column">
-        <div class="text content">
-          <img src="gears.png" class="gears image" />
-          <h3 class="section heading">RPA in Australia</h3>
-          <p class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu 0fugiat nulla
-            pariatur.
-          </p>
-          <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </p>
+    <section class="page container">
+      <div class="main content">
+        <div class="contact information">
+          <h3>Contact Information</h3>
+          <div class="details">
+            <p>info@mushin.com.au</p>
+            <p>0414 000 000</p>
+          </div>
+          <div class="socials">
+            <img src="assets/icons/facebook.svg" alt="" />
+            <img src="assets/icons/linkedin.svg" alt="" />
+            <img src="assets/icons/tiktok.svg" alt="" />
+            <img src="assets/icons/twitter.svg" alt="" />
+            <img src="assets/icons/youtube.svg" alt="" />
+          </div>
         </div>
-      </div>
-      <div class="right column reversed">
-        <div class="text content">
-          <h3 class="section heading">Robotic Process Automation<br />(RPA)</h3>
-          <p class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu 0fugiat nulla
-            pariatur.
-          </p>
-          <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </p>
-          <img class="brain image" src="brainm.png" />
-        </div>
-      </div>
-    </section>
-    <!-- HIGHLIGHTED CONTENT -->
-    <div class="highlighted content container">
-      <div class="overlay">
-        <div class="inner container">
-          <segment class="content">
-            <h3 class="section heading">Testimonials</h3>
-            <div class="section content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu 0fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <!-- CONTACT FORM -->
+        <form class="contact form">
+          <h3>Send us a message</h3>
+          <form action="submit">
+            <div class="main fields">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <input
+                type="phone"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              />
             </div>
-          </segment>
-          <segment class="content">
-            <h3 class="section heading">
-              Benefits of Intelligent<br />
-              Automation
-            </h3>
-            <div class="section content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-          </segment>
-        </div>
-      </div>
-    </div>
-    <!-- MAIN CONTENT 2 -->
-    <section class="main page content">
-      <div class="left column">
-        <div class="text content">
-          <img src="gears.png" class="gears image" />
-          <h3 class="section heading">RPA in Australia</h3>
-          <p class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu 0fugiat nulla
-            pariatur.
-          </p>
-          <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-      <div class="right column reversed">
-        <div class="text content">
-          <h3 class="section heading">Robotic Process Automation<br />(RPA)</h3>
-          <p class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu 0fugiat nulla
-            pariatur.
-          </p>
-          <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </p>
-          <img class="brain image" src="brainm.png" />
-        </div>
+            <textarea
+              name="message"
+              placeholder="Enter your message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <a class="button darkbg"
+              >Submit<span class="material-symbols-outlined">
+                chevron_right
+              </span></a
+            >
+          </form>
+        </form>
       </div>
     </section>
     <!-- FOOTER -->
@@ -205,9 +128,16 @@
             >
           </div>
         </div>
-        <div class="column">
+        <div class="column contact container">
           <p class="contact details">info@mushin.com.au</p>
           <p class="contact details">0414 000 000</p>
+          <div class="socials">
+            <img src="assets/icons/facebook.svg" alt="" />
+            <img src="assets/icons/linkedin.svg" alt="" />
+            <img src="assets/icons/tiktok.svg" alt="" />
+            <img src="assets/icons/twitter.svg" alt="" />
+            <img src="assets/icons/youtube.svg" alt="" />
+          </div>
         </div>
       </div>
     </footer>
