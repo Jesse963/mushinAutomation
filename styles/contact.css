@@ -71,7 +71,6 @@ section {
           border-bottom: 1px solid var(--background);
           &::placeholder {
             color: var(--text);
-            opacity: 0.8;
           }
           &:focus {
             border: 2px solid var(--text);
@@ -91,6 +90,9 @@ section {
         font-size: 1.3em;
         border: 1px solid white;
         width: calc(100% - 2em);
+        &::placeholder {
+          color: var(--text);
+        }
       }
     }
   }

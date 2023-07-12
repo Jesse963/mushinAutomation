@@ -1,0 +1,21 @@
+.lifecycle.stages.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 30%);
+
+  > * {
+    border: 1px solid var(--highlight);
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    text-align: left;
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    > li {
+      text-align: center;
+      list-style: inside decimal;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-top: 0.5em;
+    }
+  }
+}

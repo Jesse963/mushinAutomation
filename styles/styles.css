@@ -126,19 +126,15 @@ logo {
 .decoration.left {
   left: 0.2vw;
   border-left: calc(0.4vw * var(--logoTextScale)) solid var(--highlight);
-  box-shadow: -0.15vw 0.2vw 0.2vw rgba(0, 0, 0, 0.2);
+  box-shadow: -0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.2);
 }
 .decoration.right {
   right: 0.2vw;
   border-right: calc(0.4vw * var(--logoTextScale)) solid var(--highlight);
-  box-shadow: 0.15vw 0.2vw 0.2vw rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.2);
 }
 .decoration.right.extended {
-  /* width: 81.5% */
-  /* border: 1px dashed blue; */
   right: 0%;
-  /* right: -20%; */
-  /* border-right: 0px; */
 }
 
 .small {
@@ -295,7 +291,7 @@ a.button {
   gap: 3vw;
   > .column {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 50ch;
     > * > img {
       width: 75%;
@@ -346,8 +342,14 @@ footer {
       width: 100%;
     }
     > .contact.container > .socials {
-      gap: 0.5em;
+      gap: 0em;
       justify-content: end;
+      > img {
+        transform: scale(75%);
+        &:hover {
+          transform: scale(85%);
+        }
+      }
     }
   }
   .links {
@@ -398,11 +400,16 @@ footer {
   justify-content: center;
   > img {
     transition: all 0.2s ease-in-out;
-    transform: scale(1vw);
     opacity: 0.8;
     cursor: pointer;
     &:hover {
+      transform: scale(110%);
       opacity: 1;
     }
   }
+}
+
+ul.benefits > li {
+  list-style: none;
+  margin-bottom: 1em;
 }
