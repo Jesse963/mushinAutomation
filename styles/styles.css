@@ -1,3 +1,6 @@
+html {
+  overflow-x: hidden;
+}
 /* Definitions */
 :root {
   --logoTextScale: 0.5;
@@ -12,12 +15,13 @@
   --textShadow: 0em 0.025em 0.025em rgba(0, 0, 0, 0.2);
 }
 body {
+  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
   /* height: 200vh; */
   padding: 0;
   margin: 0;
   background-color: var(--background);
-  overflow-x: hidden;
   font-family: var(--textFont);
 }
 
