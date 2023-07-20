@@ -76,3 +76,25 @@ ul.benefits.grid {
 b {
   color: var(--highlight);
 }
+a.button {
+  position: relative;
+  left: 50%;
+  margin: 0px;
+  padding-left: 0;
+  padding-right: 0;
+  transform: translateX(-50%);
+  align-items: center;
+  font-size: 1.6em;
+  > .material-symbols-outlined {
+    color: var(--text);
+    opacity: 0.8;
+  }
+  &:hover::after {
+    width: 101%;
+  }
+}
+
+.centred {
+  text-align: center;
+  font-size: 1.2em;
+}
