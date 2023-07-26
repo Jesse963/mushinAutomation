@@ -6,7 +6,10 @@ html {
   --logoTextScale: 0.5;
 
   --highlight: #e94f37;
+  --highlight: #f7b801;
+  --highlight: #f18701;
   --text: #393e41;
+  --text: #222;
   --background: #f6f3f3;
 
   --headerFont: "Alfa Slab One";
@@ -181,11 +184,59 @@ logo {
   margin: 5em 0;
   position: relative;
   /* top: 50%; */
-  --rotationAngle: 3;
-  background-color: var(--highlight);
+  --rotationAngle: 1;
   height: fit-content;
   width: 100%;
   /* transform: rotateZ(calc(-1deg * var(--rotationAngle))); */
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: -1em;
+  padding: 5em 0;
+  width: 102%;
+  /* transform: rotateZ(calc(1deg * var(--rotationAngle))); */
+  background-color: var(--text);
+  box-shadow: 0 0 0em 0.3em var(--highlight);
+  &::before {
+    position: absolute;
+    top: -1em;
+    transform: rotateZ(calc(-1deg * var(--rotationAngle)));
+    background-color: var(--highlight);
+    content: "";
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+  }
+  &::after {
+    position: absolute;
+    bottom: -1em;
+    transform: rotateZ(calc(-1deg * var(--rotationAngle)));
+    background-color: var(--highlight);
+    content: "";
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+  }
+  > .inner.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3vw;
+    /* transform: rotateZ(calc(-1deg * var(--rotationAngle))); */
+    > segment {
+      max-width: 50ch;
+      font-size: 18px;
+      color: var(--background);
+      /* border: 2px dashed gold; */
+    }
+  }
+}
+/* .highlighted.content.container {
+  margin: 5em 0;
+  position: relative;
+  --rotationAngle: 1;
+  background-color: var(--highlight);
+  height: fit-content;
+  width: 100%;
   box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
   > .overlay {
     position: relative;
@@ -205,11 +256,10 @@ logo {
         max-width: 50ch;
         font-size: 18px;
         color: var(--background);
-        /* border: 2px dashed gold; */
       }
     }
   }
-}
+} */
 
 /* MAIN PAGE BANNER */
 banner {
@@ -328,10 +378,10 @@ footer {
   &::after {
     content: "";
     width: 101vw;
-    height: 0.8em;
+    height: 0.5em;
     position: absolute;
     background-color: var(--highlight);
-    bottom: -0.8em;
+    top: -0.5em;
     left: 0;
   }
   .contact.details {

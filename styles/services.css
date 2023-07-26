@@ -8,13 +8,14 @@ ul.grid {
     padding: 0.5em 1em;
     margin: 0.5em;
     text-align: left;
-    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.2); */
+    box-shadow: 6px 6px 0px var(--highlight);
     border-radius: 8px;
     > li {
       text-align: center;
       list-style: inside decimal;
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1.15em;
       margin-top: 0.5em;
     }
   }
@@ -37,42 +38,9 @@ ul.benefits.grid {
 /* HIGHLIGHTED CONTENT SECTION */
 /* Copied from main stylesheet to affect services only */
 .highlighted.content.container {
-  margin: 5em 0;
-  position: relative;
-  /* top: 50%; */
-  --rotationAngle: 3;
-  background-color: var(--highlight);
-  height: fit-content;
-  width: 300%;
-  left: -100%;
-  /* transform: rotateZ(calc(-1deg * var(--rotationAngle))); */
-  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
-  > .overlay {
-    position: relative;
-    left: -1em;
-    padding: 5em 0;
-    width: 102%;
-    transform: rotateZ(calc(1deg * var(--rotationAngle)));
-    background-color: var(--text);
-    box-shadow: 0.3em 0.3em var(--highlight);
-    > .inner.container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 3vw;
-      transform: rotateZ(calc(-1deg * var(--rotationAngle)));
-      margin-top: -50px;
-      > segment {
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        max-width: 50ch;
-        font-size: 18px;
-        color: var(--background);
-      }
-    }
-  }
+  min-width: 102vw;
 }
+
 b {
   color: var(--highlight);
 }

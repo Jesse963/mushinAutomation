@@ -82,24 +82,23 @@ window.onload = function () {
       }
     });
   });
-
-  // INTERSECTION OBSERVER
-  const navbarMenu = document.querySelector("navbar");
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.3,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navbarMenu.style.transform = "translate(-50%, -150%)";
-      } else {
-        navbarMenu.style.transform = "translate(-50%, 0%)";
-      }
-    });
-  }, options);
 };
+// INTERSECTION OBSERVER
+const navbarMenu = document.querySelector("navbar");
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navbarMenu.style.transform = "translate(-50%, -150%)";
+    } else {
+      navbarMenu.style.transform = "translate(-50%, 0%)";
+    }
+  });
+}, options);
 
 observer.observe(document.querySelector(".main.logo"));
