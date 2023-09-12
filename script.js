@@ -1,5 +1,8 @@
 var onLocalMachine = false;
 window.onload = function () {
+
+  console.log(window.Error.toString())
+
   //Set onLocalMachine to true if required
   onLocalMachine =
     window.location.href.includes("127.0.0.1") ||
@@ -102,3 +105,26 @@ const observer = new IntersectionObserver((entries) => {
 }, options);
 
 observer.observe(document.querySelector(".main.logo"));
+
+document.querySelectorAll(".benefits.grid>.benefit").forEach(benefit => {
+  benefit.addEventListener("click", e=>{expandParagrpahInListItem(benefit)
+  })
+})
+
+document.querySelectorAll(".lifecycle.stage").forEach(benefit => {
+  benefit.addEventListener("click", e=>{expandParagrpahInListItem(benefit)
+  })
+})
+const expandParagrpahInListItem = (listItemElement) => {
+  const paragraph = listItemElement.querySelector("p")
+  if(!listItemElement.classList.contains("expanded")){
+    paragraph.style.visibility = "visible"
+    paragraph.style.maxHeight= "1000px"
+    paragraph.style.marginBottom= "1em"
+  }else{
+    paragraph.style.visibility = "hidden"
+    paragraph.style.maxHeight= "0px"
+    paragraph.style.marginBottom= "0px"
+  }
+  listItemElement.classList.toggle("expanded")
+}
